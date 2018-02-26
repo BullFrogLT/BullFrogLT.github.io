@@ -84,7 +84,7 @@
 </nav>
 
         <div id="main" >
-            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://github.com/BullFrogLT/BullFrogLT.github.io/blob/master/images/5b1273ae7db8bbc783c12b813908caf3.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(https://github.com/BullFrogLT/BullFrogLT.github.io/blob/master/images/5b1273ae7db8bbc783c12b813908caf3.jpg?raw=true);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
                 <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >基于 python 的 bottle 库实现的数据量统计应用</h2></a>
             </div>
             <!-- Post -->
@@ -98,18 +98,18 @@
 <p>虽然说初始需求只要求尽快的满足数据量统计趋势图即可，但是为提高现场环境实用性，决定增加数据量异常预警。</p>
 </blockquote>
 <ul>
-<li><p>:white_check_mark: 主程序 <code>ns_stat_server.py</code>负责接收各 agent 发向服务端的请求；</p>
+<li><p>主程序 <code>ns_stat_server.py</code>负责接收各 agent 发向服务端的请求；</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">@app.route(&apos;/index/&apos;, method=&apos;GET&apos;)</span><br><span class="line">@app.route(&apos;/&apos;, method=&quot;GET&quot;)</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>:white_check_mark: 根据角色定义统计 agent 程序，分别安装部署在各个模块角色中，负责收集统计信息，上报给 server 端</p>
+<li><p>根据角色定义统计 agent 程序，分别安装部署在各个模块角色中，负责收集统计信息，上报给 server 端</p>
 </li>
-<li><p>:white_check_mark: 使用 sqlite 数据库保存数据，数据保存30天，过期自动删除</p>
+<li><p>使用 sqlite 数据库保存数据，数据保存30天，过期自动删除</p>
 </li>
-<li><p>:white_check_mark: 支持一键化安装部署，可检测 linux 服务器间信任链接</p>
+<li><p>支持一键化安装部署，可检测 linux 服务器间信任链接</p>
 </li>
-<li><p>:white_check_mark: 各统计模块采用 crond 定时任务，每小时定时拉起 agent 采集程序</p>
+<li><p>各统计模块采用 crond 定时任务，每小时定时拉起 agent 采集程序</p>
 </li>
-<li><p>:white_check_mark: 选用 echarts 快速实现趋势图需求</p>
+<li><p>选用 echarts 快速实现趋势图需求</p>
 </li>
 </ul>
 <h1 id="三、程序设计"><a href="#三、程序设计" class="headerlink" title="三、程序设计"></a>三、程序设计</h1><h2 id="数据抓取-agent-简述"><a href="#数据抓取-agent-简述" class="headerlink" title="数据抓取 agent 简述"></a>数据抓取 agent 简述</h2><ul>
@@ -120,7 +120,7 @@
 <p><code>es_agent</code> 爬取 Elasticsearch 统计页面数据</p>
 </li>
 </ul>
-<h1 id="四、效果展示"><a href="#四、效果展示" class="headerlink" title="四、效果展示"></a>四、效果展示</h1><h3 id="各模块数据量统计图"><a href="#各模块数据量统计图" class="headerlink" title="各模块数据量统计图"></a>各模块数据量统计图</h3><p><img src="https://github.com/BullFrogLT/stat/blob/master/pic/数据总条数.png" alt="数据总条数.png" title="数据总条数.png"></p>
+<h1 id="四、效果展示"><a href="#四、效果展示" class="headerlink" title="四、效果展示"></a>四、效果展示</h1><h3 id="各模块数据量统计图"><a href="#各模块数据量统计图" class="headerlink" title="各模块数据量统计图"></a>各模块数据量统计图</h3><p><img src="https://github.com/BullFrogLT/stat/blob/master/pic/数据总条数.png?raw=true" alt="数据总条数.png" title="数据总条数.png"></p>
 <h3 id="interds数据量统计图"><a href="#interds数据量统计图" class="headerlink" title="interds数据量统计图"></a>interds数据量统计图</h3><p><img src="https://github.com/BullFrogLT/stat/blob/master/pic/interds数据量统计.png" alt="interds数据量统计.png" title="interds数据量统计.png"></p>
 <h3 id="tornado数据量统计图"><a href="#tornado数据量统计图" class="headerlink" title="tornado数据量统计图"></a>tornado数据量统计图</h3><p><img src="https://github.com/BullFrogLT/stat/blob/master/pic/tornado数据量统计.png" alt="tornado数据量统计.png" title="tornado数据量统计.png"></p>
 <h3 id="topic数据量统计图"><a href="#topic数据量统计图" class="headerlink" title="topic数据量统计图"></a>topic数据量统计图</h3><p><img src="https://github.com/BullFrogLT/stat/blob/master/pic/topic数据量统计.png" alt="topic数据量统计.png" title="topic数据量统计.png"></p>
