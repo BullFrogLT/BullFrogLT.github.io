@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="BullFrog">
 <meta property="og:description" content="基于 python 的 bottle 库实现的数据量统计应用 需求背景：因公司运维需求，需要对某产品底层数据处理及存储层做数据量统计，需求不多，只是要求在尽量短的时间内，完成各模块数据量统计的趋势图即可。介于此类研发场景，做为一枚测试人员，需要挑选方便安装、研发成本低的轻量级架构实现需求。 Bottle是一个简单高效的遵循WSGI的微型python Web框架。说微型，是因为它只有一个文件，除Py">
 <meta property="og:image" content="https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/5b1273ae7db8bbc783c12b813908caf3.jpg">
-<meta property="og:updated_time" content="2018-03-01T12:56:03.060Z">
+<meta property="og:updated_time" content="2018-03-01T12:58:59.946Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于 python 的 bottle 库实现的数据量统计应用">
 <meta name="twitter:description" content="基于 python 的 bottle 库实现的数据量统计应用 需求背景：因公司运维需求，需要对某产品底层数据处理及存储层做数据量统计，需求不多，只是要求在尽量短的时间内，完成各模块数据量统计的趋势图即可。介于此类研发场景，做为一枚测试人员，需要挑选方便安装、研发成本低的轻量级架构实现需求。 Bottle是一个简单高效的遵循WSGI的微型python Web框架。说微型，是因为它只有一个文件，除Py">
@@ -197,17 +197,17 @@
 <p><code>es_agent</code> 爬取 Elasticsearch 统计页面数据</p>
 </li>
 </ul>
-<h1 id="四、效果展示"><a href="#四、效果展示" class="headerlink" title="四、效果展示"></a>四、效果展示</h1><h3 id="各模块数据量统计图"><a href="#各模块数据量统计图" class="headerlink" title="各模块数据量统计图"></a>各模块数据量统计图</h3><p><img src="https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/stat/数据总条数.png" alt="数据总条数.png"></p>
-<h3 id="interds数据量统计图"><a href="#interds数据量统计图" class="headerlink" title="interds数据量统计图"></a>interds数据量统计图</h3><p><img src="https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/stat/interds数据量统计.png" alt="interds数据量统计.png"></p>
-<h3 id="tornado数据量统计图"><a href="#tornado数据量统计图" class="headerlink" title="tornado数据量统计图"></a>tornado数据量统计图</h3><p><img src="https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/stat/tornado数据量统计.png" alt="tornado数据量统计.png"></p>
-<h3 id="topic数据量统计图"><a href="#topic数据量统计图" class="headerlink" title="topic数据量统计图"></a>topic数据量统计图</h3><p><img src="https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/stat/topic数据量统计.png" alt="topic数据量统计.png"></p>
-<h3 id="crius数据量统计图"><a href="#crius数据量统计图" class="headerlink" title="crius数据量统计图"></a>crius数据量统计图</h3><p><img src="https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/stat/crius数据量统计.png" alt="crius数据量统计.png"></p>
-<h3 id="ares数据量统计图"><a href="#ares数据量统计图" class="headerlink" title="ares数据量统计图"></a>ares数据量统计图</h3><p><img src="https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/stat/ares数据量统计.png" alt="ares数据量统计.png"></p>
-<h3 id="elasticsearch数据量统计图"><a href="#elasticsearch数据量统计图" class="headerlink" title="elasticsearch数据量统计图"></a>elasticsearch数据量统计图</h3><p><img src="https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/stat/es数据量统计.png" alt="elasticsearch数据量统计.png"></p>
-<h3 id="按协议统计图"><a href="#按协议统计图" class="headerlink" title="按协议统计图"></a>按协议统计图</h3><p><img src="https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/stat/按协议统计.png" alt="按协议统计.png"></p>
-<h3 id="数据量异常预警界面"><a href="#数据量异常预警界面" class="headerlink" title="数据量异常预警界面"></a>数据量异常预警界面</h3><p><img src="https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/stat/预警界面.png" alt="预警界面.png"></p>
-<h3 id="预警规则"><a href="#预警规则" class="headerlink" title="预警规则"></a>预警规则</h3><p><img src="https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/stat/预警规则.png" alt="预警规则.png"></p>
-<h1 id="五、部分代码演示"><a href="#五、部分代码演示" class="headerlink" title="五、部分代码演示"></a>五、部分代码演示</h1><h3 id="init-db-py-创建统计表"><a href="#init-db-py-创建统计表" class="headerlink" title="init_db.py 创建统计表"></a>init_db.py 创建统计表</h3><p>!(<a href="https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/stat/创建数据库代码.png" target="_blank" rel="noopener">https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/stat/创建数据库代码.png</a>)</p>
+<h1 id="四、效果展示"><a href="#四、效果展示" class="headerlink" title="四、效果展示"></a>四、效果展示</h1><p><img src="https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/stat/数据总条数.png" alt="数据总条数.png"></p>
+<p><img src="https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/stat/interds数据量统计.png" alt="interds数据量统计.png"></p>
+<p><img src="https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/stat/tornado数据量统计.png" alt="tornado数据量统计.png"></p>
+<p><img src="https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/stat/topic数据量统计.png" alt="topic数据量统计.png"></p>
+<p><img src="https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/stat/crius数据量统计.png" alt="crius数据量统计.png"></p>
+<p><img src="https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/stat/ares数据量统计.png" alt="ares数据量统计.png"></p>
+<p><img src="https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/stat/es数据量统计.png" alt="elasticsearch数据量统计.png"></p>
+<p><img src="https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/stat/按协议统计.png" alt="按协议统计.png"></p>
+<p><img src="https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/stat/预警界面.png" alt="预警界面.png"></p>
+<p><img src="https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/stat/预警规则.png" alt="预警规则.png"></p>
+<h1 id="五、部分代码演示"><a href="#五、部分代码演示" class="headerlink" title="五、部分代码演示"></a>五、部分代码演示</h1><h3 id="init-db-py-创建统计表"><a href="#init-db-py-创建统计表" class="headerlink" title="init_db.py 创建统计表"></a>init_db.py 创建统计表</h3><p><img src="https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/stat/创建数据库代码.png" alt="init_db.py"></p>
 
         </div>
         <footer class="article-footer">
@@ -215,7 +215,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2018/02/26/stat/" data-id="cje8ikxuz0000c4xj3i5ky6al" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
+    <a data-url="http://yoursite.com/2018/02/26/stat/" data-id="cje8m4fyk0000ddxjydoplrf9" class="article-share-link"><i class="fa fa-share"></i>Compartir</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
