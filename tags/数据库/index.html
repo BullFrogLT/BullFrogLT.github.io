@@ -142,17 +142,17 @@
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2018/11/23/Mysql/" class="thumbnail">
+        <a href="/2018/11/23/Postgres/" class="thumbnail">
     
     
-        <span style="background-image:url(https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/数据库/Mysql.png)" alt="Mysql" class="thumbnail-image"></span>
+        <span style="background-image:url(https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/数据库/Postgre.png)" alt="Postgre" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2018/11/23/Mysql/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2018/11/23/Postgres/">0</span>
     
 </span>
 
@@ -170,14 +170,14 @@
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2018/11/23/Mysql/">Mysql</a>
+        <a href="/2018/11/23/Postgres/">Postgre</a>
         </h1>
     
 
         <p class="article-excerpt">
-            数据库导出1mysqldump -uooize -pooize dbname &gt; dbname.sql
-如果导入数据库报以下错误：
-12[root@i-n7rabnmo home]# mysqldump -uooize -pooize dbname &gt; dbname.sqlERROR 1153 (08S01) at line 493: Got a packet bigger than 
+            kill 数据库中的进程123psql -d cdasdbselect procpid,current_query from pg_stat_activity;select pg_cancel_backend('28643');
+导出12su - gpadminpg_dump -f '/home/gpadmin/cdas_wisdomdb2013129.bak' cdas_wisdomd
+创建 d
         </p>
     </div>
 </article>
@@ -246,17 +246,17 @@
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2018/11/23/Postgres/" class="thumbnail">
+        <a href="/2018/11/23/Mysql/" class="thumbnail">
     
     
-        <span style="background-image:url(https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/数据库/Postgres.png)" alt="Postgres" class="thumbnail-image"></span>
+        <span style="background-image:url(https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/数据库/Mysql.png)" alt="Mysql" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2018/11/23/Postgres/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2018/11/23/Mysql/">0</span>
     
 </span>
 
@@ -274,14 +274,14 @@
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2018/11/23/Postgres/">Postgres</a>
+        <a href="/2018/11/23/Mysql/">Mysql</a>
         </h1>
     
 
         <p class="article-excerpt">
-            kill 数据库中的进程123psql -d cdasdbselect procpid,current_query from pg_stat_activity;select pg_cancel_backend('28643');
-导出12su - gpadminpg_dump -f '/home/gpadmin/cdas_wisdomdb2013129.bak' cdas_wisdomd
-创建 d
+            数据库导出1mysqldump -uooize -pooize dbname &gt; dbname.sql
+如果导入数据库报以下错误：
+12[root@i-n7rabnmo home]# mysqldump -uooize -pooize dbname &gt; dbname.sqlERROR 1153 (08S01) at line 493: Got a packet bigger than 
         </p>
     </div>
 </article>
@@ -442,30 +442,10 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2018/11/23/Oracle/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/数据库/Oracle.png)" alt="Oracle" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/数据库/">数据库</a></p>
-                            <p class="item-title"><a href="/2018/11/23/Oracle/" class="title">Oracle</a></p>
-                            <p class="item-date"><time datetime="2018-11-23T13:48:01.000Z" itemprop="datePublished">2018-11-23</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
                             <a href="/2018/11/23/Postgres/" class="thumbnail">
     
     
-        <span style="background-image:url(https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/数据库/Postgres.png)" alt="Postgres" class="thumbnail-image"></span>
+        <span style="background-image:url(https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/数据库/Postgre.png)" alt="Postgre" class="thumbnail-image"></span>
     
     
 </a>
@@ -474,7 +454,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/数据库/">数据库</a></p>
-                            <p class="item-title"><a href="/2018/11/23/Postgres/" class="title">Postgres</a></p>
+                            <p class="item-title"><a href="/2018/11/23/Postgres/" class="title">Postgre</a></p>
                             <p class="item-date"><time datetime="2018-11-23T13:48:01.000Z" itemprop="datePublished">2018-11-23</time></p>
                         </div>
                     </li>
@@ -495,6 +475,26 @@
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/数据库/">数据库</a></p>
                             <p class="item-title"><a href="/2018/11/23/Mysql/" class="title">Mysql</a></p>
+                            <p class="item-date"><time datetime="2018-11-23T13:48:01.000Z" itemprop="datePublished">2018-11-23</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/11/23/Oracle/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/数据库/Oracle.png)" alt="Oracle" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/数据库/">数据库</a></p>
+                            <p class="item-title"><a href="/2018/11/23/Oracle/" class="title">Oracle</a></p>
                             <p class="item-date"><time datetime="2018-11-23T13:48:01.000Z" itemprop="datePublished">2018-11-23</time></p>
                         </div>
                     </li>

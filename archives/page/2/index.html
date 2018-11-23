@@ -201,17 +201,17 @@
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2016/08/15/Linux文本处理/" class="thumbnail">
+        <a href="/2016/08/15/EOF用法/" class="thumbnail">
     
     
-        <span style="background-image:url(https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/Linux.png)" alt="Linux文本处理" class="thumbnail-image"></span>
+        <span style="background-image:url(https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/Shell.png)" alt="EOF用法" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2016/08/15/Linux文本处理/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2016/08/15/EOF用法/">0</span>
     
 </span>
 
@@ -222,20 +222,21 @@
         
         <div class="article-meta">
             <div class="category">
-            <a class="article-category-link" href="/categories/Linux/">Linux</a>
+            <a class="article-category-link" href="/categories/Shell/">Shell</a>
             </div>
             <div class="date"><time datetime="2016-08-15T12:51:18.000Z" itemprop="datePublished">2016-08-15</time></div>
         </div>
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2016/08/15/Linux文本处理/">Linux文本处理</a>
+        <a href="/2016/08/15/EOF用法/">EOF用法</a>
         </h1>
     
 
         <p class="article-excerpt">
-            以下为文档记录，不常用
-echo 命令：123&gt;echo "hello" &gt;&gt; fenghuo.txt    直接将字符串输入到文件中，不会覆盖文件内的内容，直接在文件内容后面追加&gt;echo "hello" &gt; fenghuo.txt    直接将字符串输入到文件中，覆盖文件内的内容，文件内容是使用echo写入的内容&gt;echo -e "haha\nhehe" &
+            EOF 用法&lt;&lt;EOF： 相当于将以下内容敲入到命令中
+&gt;将输入命令的返回结果输出到log文件中
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364#!/bin/bash# 工具用途：登录mys
         </p>
     </div>
 </article>
@@ -346,6 +347,102 @@ find 结合删除操作当目录中文件个数太多，for语句删除会提示
         <article class="article article-summary">
     <div class="article-summary-inner">
         
+        <a href="/2016/08/15/awk用法/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/Shell.png)" alt="awk用法" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2016/08/15/awk用法/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/Shell/">Shell</a>
+            </div>
+            <div class="date"><time datetime="2016-08-15T12:51:18.000Z" itemprop="datePublished">2016-08-15</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2016/08/15/awk用法/">awk用法</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            统计 Hadoop 集群磁盘使用情况1for i in `cat /root/hosts`;do ssh $i "df |grep "hdfsdata""| awk  '&#123;(size+=$2) (used+=$3) (avail+=$4)&#125;;END&#123;printf"%d,%d,%d\n",size,used,avail&#125;&#123;&#125;'&gt;&gt
+        </p>
+    </div>
+</article>
+    
+        </div>
+    
+
+    
+    
+    
+    
+        <div class="article-row">
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2016/08/15/Python文件处理/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/Python.png)" alt="Python文件处理" class="thumbnail-image"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2016/08/15/Python文件处理/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/Python/">Python</a>
+            </div>
+            <div class="date"><time datetime="2016-08-15T12:51:18.000Z" itemprop="datePublished">2016-08-15</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2016/08/15/Python文件处理/">Python文件处理</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            常用方法12345678910111213os.chdir(tmpdir)      			 # 更改当前路径 cd tmpdir变量目录os.getcwd()     			     # 取当前路径、os.mkdir('example')	 		      # 创建目录os.listdir(cwd)      		      # 取当前路径下所有目录os.path.join(output_pat
+        </p>
+    </div>
+</article>
+    
+
+    
+    
+    
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
         <a href="/2016/08/15/VIM一些用法/" class="thumbnail">
     
     
@@ -402,17 +499,17 @@ find 结合删除操作当目录中文件个数太多，for语句删除会提示
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2016/08/15/awk用法/" class="thumbnail">
+        <a href="/2016/08/15/Python公共方法/" class="thumbnail">
     
     
-        <span style="background-image:url(https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/Shell.png)" alt="awk用法" class="thumbnail-image"></span>
+        <span style="background-image:url(https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/Python.png)" alt="Python公共方法" class="thumbnail-image"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2016/08/15/awk用法/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2016/08/15/Python公共方法/">0</span>
     
 </span>
 
@@ -423,19 +520,19 @@ find 结合删除操作当目录中文件个数太多，for语句删除会提示
         
         <div class="article-meta">
             <div class="category">
-            <a class="article-category-link" href="/categories/Shell/">Shell</a>
+            <a class="article-category-link" href="/categories/Python/">Python</a>
             </div>
             <div class="date"><time datetime="2016-08-15T12:51:18.000Z" itemprop="datePublished">2016-08-15</time></div>
         </div>
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2016/08/15/awk用法/">awk用法</a>
+        <a href="/2016/08/15/Python公共方法/">Python公共方法</a>
         </h1>
     
 
         <p class="article-excerpt">
-            统计 Hadoop 集群磁盘使用情况1for i in `cat /root/hosts`;do ssh $i "df |grep "hdfsdata""| awk  '&#123;(size+=$2) (used+=$3) (avail+=$4)&#125;;END&#123;printf"%d,%d,%d\n",size,used,avail&#125;&#123;&#125;'&gt;&gt
+            获取 Linux 本机 IP123456789# 方法一：# 利用socket取计算机名、计算机IP，这样做的好处是可以跨操作系统hostname = socket.gethostname()ip = socket.gethostbyname(self.hostname)# 方法二：def getip():    ip = "ifconfig -a | grep 'inet addr' | gre
         </p>
     </div>
 </article>
@@ -444,58 +541,6 @@ find 结合删除操作当目录中文件个数太多，for语句删除会提示
     
     
     
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2016/08/15/EOF用法/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/Shell.png)" alt="EOF用法" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2016/08/15/EOF用法/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Shell/">Shell</a>
-            </div>
-            <div class="date"><time datetime="2016-08-15T12:51:18.000Z" itemprop="datePublished">2016-08-15</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2016/08/15/EOF用法/">EOF用法</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            EOF 用法&lt;&lt;EOF： 相当于将以下内容敲入到命令中
-&gt;将输入命令的返回结果输出到log文件中
-12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364#!/bin/bash# 工具用途：登录mys
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -534,52 +579,6 @@ find 结合删除操作当目录中文件个数太多，for语句删除会提示
 
         <p class="article-excerpt">
             1234567891011# 简单用法：sed -i  "s/HBASE_HEAPSIZE=.*/HBASE_HEAPSIZE=$hbase_heapsize/" "$&#123;hbase_confdir&#125;"/hbase-env.sh# 高级用法：首先定位到/HBASE_OPTS所在行，再用正则修改值namenode_opts=1000namenode_memory="-Xms"$na
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2016/08/15/Python公共方法/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/Python.png)" alt="Python公共方法" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2016/08/15/Python公共方法/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Python/">Python</a>
-            </div>
-            <div class="date"><time datetime="2016-08-15T12:51:18.000Z" itemprop="datePublished">2016-08-15</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2016/08/15/Python公共方法/">Python公共方法</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            获取 Linux 本机 IP123456789# 方法一：# 利用socket取计算机名、计算机IP，这样做的好处是可以跨操作系统hostname = socket.gethostname()ip = socket.gethostbyname(self.hostname)# 方法二：def getip():    ip = "ifconfig -a | grep 'inet addr' | gre
         </p>
     </div>
 </article>
@@ -701,30 +700,10 @@ tcpreplay 安装拷贝libnet_1.1.2.1.tar.
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2018/11/23/Oracle/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/数据库/Oracle.png)" alt="Oracle" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/数据库/">数据库</a></p>
-                            <p class="item-title"><a href="/2018/11/23/Oracle/" class="title">Oracle</a></p>
-                            <p class="item-date"><time datetime="2018-11-23T13:48:01.000Z" itemprop="datePublished">2018-11-23</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
                             <a href="/2018/11/23/Postgres/" class="thumbnail">
     
     
-        <span style="background-image:url(https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/数据库/Postgres.png)" alt="Postgres" class="thumbnail-image"></span>
+        <span style="background-image:url(https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/数据库/Postgre.png)" alt="Postgre" class="thumbnail-image"></span>
     
     
 </a>
@@ -733,7 +712,7 @@ tcpreplay 安装拷贝libnet_1.1.2.1.tar.
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/数据库/">数据库</a></p>
-                            <p class="item-title"><a href="/2018/11/23/Postgres/" class="title">Postgres</a></p>
+                            <p class="item-title"><a href="/2018/11/23/Postgres/" class="title">Postgre</a></p>
                             <p class="item-date"><time datetime="2018-11-23T13:48:01.000Z" itemprop="datePublished">2018-11-23</time></p>
                         </div>
                     </li>
@@ -754,6 +733,26 @@ tcpreplay 安装拷贝libnet_1.1.2.1.tar.
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/数据库/">数据库</a></p>
                             <p class="item-title"><a href="/2018/11/23/Mysql/" class="title">Mysql</a></p>
+                            <p class="item-date"><time datetime="2018-11-23T13:48:01.000Z" itemprop="datePublished">2018-11-23</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/11/23/Oracle/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/数据库/Oracle.png)" alt="Oracle" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/数据库/">数据库</a></p>
+                            <p class="item-title"><a href="/2018/11/23/Oracle/" class="title">Oracle</a></p>
                             <p class="item-date"><time datetime="2018-11-23T13:48:01.000Z" itemprop="datePublished">2018-11-23</time></p>
                         </div>
                     </li>
