@@ -3,16 +3,23 @@
 <head>
     <meta charset="utf-8">
     
-    <title>归档 | BullFrog</title>
+    <title>抓包相关 | BullFrog</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-    <meta property="og:type" content="website">
-<meta property="og:title" content="BullFrog">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+        <meta name="keywords" content="Linux" />
+    
+    <meta name="description" content="抓包相关知识tcpreplay放包操作1tcpreplay -i eth2 -l 1  -r 10 -I00:15:17:61:53:AD /home/http.pcap -i:发送的网口 -l:发送的次数，如果为“0”表示循环放包 -r:放包的速率(Mbps)，如果没有此项，表示原速放包 -I:指定目标MAC      若是本机，则可以省略 tcpreplay 安装拷贝libnet_1.1.2.">
+<meta name="keywords" content="Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="抓包相关">
+<meta property="og:url" content="http://yoursite.com/2016/08/15/抓包相关/index.html">
 <meta property="og:site_name" content="BullFrog">
+<meta property="og:description" content="抓包相关知识tcpreplay放包操作1tcpreplay -i eth2 -l 1  -r 10 -I00:15:17:61:53:AD /home/http.pcap -i:发送的网口 -l:发送的次数，如果为“0”表示循环放包 -r:放包的速率(Mbps)，如果没有此项，表示原速放包 -I:指定目标MAC      若是本机，则可以省略 tcpreplay 安装拷贝libnet_1.1.2.">
+<meta property="og:updated_time" content="2018-11-23T13:13:08.795Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="BullFrog">
+<meta name="twitter:title" content="抓包相关">
+<meta name="twitter:description" content="抓包相关知识tcpreplay放包操作1tcpreplay -i eth2 -l 1  -r 10 -I00:15:17:61:53:AD /home/http.pcap -i:发送的网口 -l:发送的次数，如果为“0”表示循环放包 -r:放包的速率(Mbps)，如果没有此项，表示原速放包 -I:指定目标MAC      若是本机，则可以省略 tcpreplay 安装拷贝libnet_1.1.2.">
     
 
     
@@ -119,469 +126,144 @@
                         <div class="main-body-header">
     <h1 class="header">
     
-    <i class="icon fa fa-archive"></i>归档
+    <a class="page-title-link" href="/categories/Linux/">Linux</a>
     </h1>
 </div>
                         <div class="main-body-content">
-                            
-
-    
-    
+                            <article id="post-抓包相关" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
         
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2018" class="archive-year"><i class="icon fa fa-calendar-o"></i>2018</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/05/27/Selenium2/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/selenium/selenium.png)" alt="Selenium2" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2018/05/27/Selenium2/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Python/">Python</a>
-            </div>
-            <div class="date"><time datetime="2018-05-27T13:06:39.000Z" itemprop="datePublished">2018-05-27</time></div>
-        </div>
-        
+            <header class="article-header">
+                
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2018/05/27/Selenium2/">Selenium2</a>
+        抓包相关
         </h1>
     
 
-        <p class="article-excerpt">
-            Selenium2 + Unittest + Jenkins测试
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2016/08/15/抓包相关/" class="article-date">
+            <time datetime="2016-08-15T12:51:18.000Z" itemprop="datePublished">2016-08-15</time>
+        </a>
+    </div>
 
-✅  Selenium2
-✅  Unittest
-✅  Python2
-✅  HTMLTestRunner
-✅  Jenkins
-✅  Xpath
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Linux/">Linux</a>
+    </div>
 
-一、测试架构介绍
-.
-├── READ.md
-├── __init__.py
-├── common_lib                    公共基础类
-│   ├── __in
-        </p>
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h1 id="抓包相关知识"><a href="#抓包相关知识" class="headerlink" title="抓包相关知识"></a>抓包相关知识</h1><h2 id="tcpreplay放包操作"><a href="#tcpreplay放包操作" class="headerlink" title="tcpreplay放包操作"></a>tcpreplay放包操作</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tcpreplay -i eth2 -l 1  -r 10 -I00:15:17:61:53:AD /home/http.pcap</span><br></pre></td></tr></table></figure>
+<p><code>-i</code>:发送的网口</p>
+<p><code>-l</code>:发送的次数，如果为“0”表示循环放包</p>
+<p><code>-r</code>:放包的速率(Mbps)，如果没有此项，表示原速放包</p>
+<p><code>-I</code>:指定目标MAC      若是本机，则可以省略</p>
+<h2 id="tcpreplay-安装"><a href="#tcpreplay-安装" class="headerlink" title="tcpreplay 安装"></a>tcpreplay 安装</h2><p>拷贝<code>libnet_1.1.2.1.tar.gz</code> 和<code>tcpreplay-3.0.1.tar.gz</code>到<code>/root</code>目录下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">tar zxvf libnet_1.1.2.1.tar.gz</span><br><span class="line">cd libnet</span><br><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">make install</span><br><span class="line"></span><br><span class="line">tar zxvf tcpreplay-3.0.1.tar.gz</span><br><span class="line">cd tcpreplay-3.0.1</span><br><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">make install1</span><br></pre></td></tr></table></figure>
+<p>​    <code>tcpreplay</code>安装完成后，如果执行<code>tcpreplay</code>命令提示缺少<code>libpcap.so.0.8.3</code>库文件，需要从其他装有<code>tcpreplay</code>服务器（操作系统要相同）上的<code>/usr/local/lib/</code>目录中拷贝一份到当前服务器的<code>/usr/local/lib/</code>目录，然后执行<code>ldconfig</code>即可</p>
+<h2 id="抓包操作"><a href="#抓包操作" class="headerlink" title="抓包操作"></a>抓包操作</h2><p><code>tcpdump</code>是网络数据采集分析工具，可以将网络中传送的数据包的“头”完全截获下来提供分析，它执行对网络层、协议、主机、端口的过滤，并提供and/or/not等逻辑语句来过滤无用信息</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 抓取ethX口指定IP地址和端口号的报文，报文保存在当前目录下以xxx.cap形式存在。</span><br><span class="line">tcpdump -i ethX host ip and port 端口 -s 1600 -w xxx.cap</span><br></pre></td></tr></table></figure>
+<p><code>-i</code>指定监听的网络接口</p>
+<p><code>-e</code> 在输出行打印出数据链路层的头部信息</p>
+<p><code>-n</code> 不把网络地址转换成名字</p>
+<p><code>-w</code>直接将包写入文件中，并不分析和打印出来</p>
+<p><code>-s</code> 设置每个数据包的大小</p>
+<p><code>-r</code>从指定文件中读取包(这些包一般通过-w选项产生)</p>
+<p>如</p>
+<p><code>tcpdump –i ethX –en</code>      //监听<code>ethX</code>口的报文</p>
+<p><code>tcpdump -r xxx.cap</code>          //读取<code>xxx.cap</code>的报文</p>
+<p>有时候需要将网卡设置成混杂模式</p>
+<p><code>ifconfig eth0 promisc</code>     //将<code>eth0</code>口设置为混杂模式</p>
+<p><code>ifconfig eth0 -promisc</code>     //取消混杂模式</p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://yoursite.com/2016/08/15/抓包相关/" data-id="cjou1rljr000jh1xjhziuiw18" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
     </div>
 </article>
-    
 
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/05/27/Selenium属性及调用方法/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/selenium/selenium.png)" alt="Selenium2属性及调用方法" class="thumbnail-image"></span>
-    
+    <section id="comments">
     
         
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2018/05/27/Selenium属性及调用方法/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Python/">Python</a>
-            </div>
-            <div class="date"><time datetime="2018-05-27T13:06:39.000Z" itemprop="datePublished">2018-05-27</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/05/27/Selenium属性及调用方法/">Selenium2属性及调用方法</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            安装
-创建虚拟环境：virtualenv virproject_selenium
-加载环境：source  bin/activate
-安装库：pip install selenium -i https://pypi.doubanio.com/simple
-下载浏览器驱动：http://chromedriver.storage.googleapis.com/index.html
-unzip chro
-        </p>
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
-</article>
-    
-        </div>
-    
 
     
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/03/04/macaca安装篇（一）/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/macaca/monkey.png)" alt="macaca安装篇（一）" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2018/03/04/macaca安装篇（一）/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/macaca/">macaca</a>
-            </div>
-            <div class="date"><time datetime="2018-03-04T13:58:01.000Z" itemprop="datePublished">2018-03-04</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/03/04/macaca安装篇（一）/">macaca安装篇（一）</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            Macaca 是一套面向用户端软件的测试解决方案，提供了自动化驱动，环境配套，周边工具，集成方案，旨在解决终端上的测试、自动化、性能等方面的问题今天就来尝试安装一下
-MACACA 安装篇安装过程
-安装 xcode
-
-安装 node.js
-1https://nodejs.org/en/download/
-检查 node.js是否安装成功 
-1234liutao@liutaodeMacBook-Pro
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2018/02/26/stat/" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/stat/5b1273ae7db8bbc783c12b813908caf3.jpg)" alt="基于 python 的 bottle 库实现的数据量统计应用" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2018/02/26/stat/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Python/">Python</a>
-            </div>
-            <div class="date"><time datetime="2018-02-26T14:50:43.000Z" itemprop="datePublished">2018-02-26</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2018/02/26/stat/">基于 python 的 bottle 库实现的数据量统计应用</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            基于 python 的 bottle 库实现的数据量统计应用
-需求背景：因公司运维需求，需要对某产品底层数据处理及存储层做数据量统计，需求不多，只是要求在尽量短的时间内，完成各模块数据量统计的趋势图即可。介于此类研发场景，做为一枚测试人员，需要挑选方便安装、研发成本低的轻量级架构实现需求。
-Bottle是一个简单高效的遵循WSGI的微型python Web框架。说微型，是因为它只有一个文件，除Py
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-        
-            </div></section>
-        
-        
-        <section class="archives-wrap">
-            <div class="archive-year-wrap">
-                <a href="/archives/2016" class="archive-year"><i class="icon fa fa-calendar-o"></i>2016</a>
-            </div>
-            <div class="archives">
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2016/08/15/VIM一些用法/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2016/08/15/VIM一些用法/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Linux/">Linux</a>
-            </div>
-            <div class="date"><time datetime="2016-08-15T12:51:18.000Z" itemprop="datePublished">2016-08-15</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2016/08/15/VIM一些用法/">VIM一些用法</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            VIM 一些用法vim 比对文件区别123vim -d file1.txt file2.txt:qall
-如果需要跳转光标到另一侧，按Ctrl+w键
-忽略大小写12:set ignorecase:set noignorecase
-查询 the1/\&lt;the\&gt;
-切换到第5行15G
-更改文件格式123set ff=unixset ff=dosset ff=mac
-文件加密解密12vim 
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2016/08/15/抓包相关/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2016/08/15/抓包相关/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Linux/">Linux</a>
-            </div>
-            <div class="date"><time datetime="2016-08-15T12:51:18.000Z" itemprop="datePublished">2016-08-15</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2016/08/15/抓包相关/">抓包相关</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            抓包相关知识tcpreplay放包操作1tcpreplay -i eth2 -l 1  -r 10 -I00:15:17:61:53:AD /home/http.pcap
--i:发送的网口
--l:发送的次数，如果为“0”表示循环放包
--r:放包的速率(Mbps)，如果没有此项，表示原速放包
--I:指定目标MAC      若是本机，则可以省略
-tcpreplay 安装拷贝libnet_1.1.2.
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2016/08/15/硬件知识/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2016/08/15/硬件知识/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Linux/">Linux</a>
-            </div>
-            <div class="date"><time datetime="2016-08-15T12:51:18.000Z" itemprop="datePublished">2016-08-15</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2016/08/15/硬件知识/">硬件知识</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            硬件知识网络此处01、02的图
-光纤分为多模光纤和单模光纤
-多模光纤主要用于远距离的传输
-单模光纤主要用于近距离传输
-光纤根据接口的不同还可分为L口（小口，这个常用，PR上使用）s口（大口）F口（圆口）
-使用法兰盘可以将光纤连接起来
-光卡光纤需要插在光卡上
-光卡需要安装在服务器的光模块上
-光模块可以分为双口的和单口的
-如何区分光模块的进口和出口
-进口没有红光，出口有红光
-如何区分光纤的进口和出口
-
-        </p>
-    </div>
-</article>
-    
-
-    
-    
-    
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2016/08/15/软件知识/" class="thumbnail">
-    
-    
-        <span style="background-image:url(C:\Users\ADMINI~1\AppData\Local\Temp\1540800792161.png)" alt=" 软件知识" class="thumbnail-image"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2016/08/15/软件知识/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Linux/">Linux</a>
-            </div>
-            <div class="date"><time datetime="2016-08-15T12:51:18.000Z" itemprop="datePublished">2016-08-15</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2016/08/15/软件知识/"> 软件知识</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            软件知识Linux服务器间信任连接1234# 在主信任机上生成KEY：/usr/bin/ssh-keygen -t rsa -N ""# 将生成的KEY导入到各台从信任机器的验证文件里面：cat /root/.ssh/id_rsa.pub | ssh 服务器ip 'cat &gt;&gt; .ssh/authorized_keys'
-Linux CPU数量判断1、具有相同core id的cpu是同
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-
-    </div></section>
-
+    </section>
 
 
                         </div>
@@ -602,6 +284,29 @@ Linux CPU数量判断1、具有相同core id的cpu是同
             
         </ul>
     </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/08/15/VIM一些用法/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            VIM一些用法
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2016/08/15/硬件知识/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">硬件知识</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
     
     <div class="widgets-container">
         
@@ -800,11 +505,13 @@ Linux CPU数量判断1、具有相同core id的cpu是同
     var disqus_shortname = 'hueman';
     
     
+    var disqus_url = 'http://yoursite.com/2016/08/15/抓包相关/';
+    
     (function() {
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
     </script>
