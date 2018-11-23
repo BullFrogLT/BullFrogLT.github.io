@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Shell基础用法 | BullFrog</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="Shell" />
+    
+    <meta name="description" content="检测服务器操作命令12USER_IP=who -u am i 2&amp;gt;/dev/null | awk &apos;&amp;#123;print $NF&amp;#125;&apos; | sed -e &apos;s/[()]//g&apos;PROMPT_COMMAND=&apos;date &quot;+[%Y-%m-%d_%H:%M:%S LOGNAME from USER_IP]:history 1 | cut -c 8-&quot; &amp;gt;&amp;gt; /var/log">
+<meta name="keywords" content="Shell">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Shell基础用法">
+<meta property="og:url" content="http://yoursite.com/2016/08/15/Shell基础用法/index.html">
+<meta property="og:site_name" content="BullFrog">
+<meta property="og:description" content="检测服务器操作命令12USER_IP=who -u am i 2&amp;gt;/dev/null | awk &apos;&amp;#123;print $NF&amp;#125;&apos; | sed -e &apos;s/[()]//g&apos;PROMPT_COMMAND=&apos;date &quot;+[%Y-%m-%d_%H:%M:%S LOGNAME from USER_IP]:history 1 | cut -c 8-&quot; &amp;gt;&amp;gt; /var/log">
+<meta property="og:updated_time" content="2018-11-23T13:42:29.978Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Shell基础用法">
+<meta name="twitter:description" content="检测服务器操作命令12USER_IP=who -u am i 2&amp;gt;/dev/null | awk &apos;&amp;#123;print $NF&amp;#125;&apos; | sed -e &apos;s/[()]//g&apos;PROMPT_COMMAND=&apos;date &quot;+[%Y-%m-%d_%H:%M:%S LOGNAME from USER_IP]:history 1 | cut -c 8-&quot; &amp;gt;&amp;gt; /var/log">
+    
+
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">主页</a>
+                                </li>
+                            
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Linux/">Linux</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Python/">Python</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Shell/">Shell</a></li><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/macaca/">macaca</a></li></ul>
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">关于</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/Shell/">Shell</a>
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-Shell基础用法" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Shell基础用法
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2016/08/15/Shell基础用法/" class="article-date">
+            <time datetime="2016-08-15T12:51:18.000Z" itemprop="datePublished">2016-08-15</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Shell/">Shell</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <h2 id="检测服务器操作命令"><a href="#检测服务器操作命令" class="headerlink" title="检测服务器操作命令"></a>检测服务器操作命令</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">USER_IP=who -u am i 2&gt;/dev/null | awk '&#123;print $NF&#125;' | sed -e 's/[()]//g'</span><br><span class="line">PROMPT_COMMAND='date "+[%Y-%m-%d_%H:%M:%S LOGNAME from USER_IP]:history 1 | cut -c 8-" &gt;&gt; /var/log/command.log'</span><br></pre></td></tr></table></figure>
+<h2 id="查看、修改文件句柄"><a href="#查看、修改文件句柄" class="headerlink" title="查看、修改文件句柄"></a>查看、修改文件句柄</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 查看文件句柄数</span><br><span class="line">ulimit -n</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 修改文件句柄数</span><br><span class="line">ulimit -n 65535</span><br></pre></td></tr></table></figure>
+<h2 id="Linux-获取本地IP地址"><a href="#Linux-获取本地IP地址" class="headerlink" title="Linux 获取本地IP地址"></a>Linux 获取本地IP地址</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ifconfig -a | grep "inet addr" | grep -v '127.0.0.1' | cut -d: -f2 | awk '&#123;print $1&#125;' | head -1</span><br></pre></td></tr></table></figure>
+<h2 id="Cut-使用方法"><a href="#Cut-使用方法" class="headerlink" title="Cut 使用方法"></a>Cut 使用方法</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(FUDE-1.1.0@AS6U3.amd64)[root@hm85 ~]# echo "-t=20151130:20151201" | cut -d= -f2 | cut -d: -f1</span><br><span class="line">20151130</span><br><span class="line">(FUDE-1.1.0@AS6U3.amd64)[root@hm85 ~]# echo "-t=20151130:20151201" | cut -d= -f2 | cut -d: -f2</span><br><span class="line">20151201</span><br><span class="line">(FUDE-1.1.0@AS6U3.amd64)[root@hm85 ~]#</span><br></pre></td></tr></table></figure>
+<h2 id="Is-continue-使用方法"><a href="#Is-continue-使用方法" class="headerlink" title="Is_continue 使用方法"></a>Is_continue 使用方法</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin/sh</span><br><span class="line"></span><br><span class="line">echo -n  "continue: [y/n]:"</span><br><span class="line">read is_continue</span><br><span class="line">if [ $is_continue = "y" ]</span><br><span class="line">then</span><br><span class="line">    echo "y"</span><br><span class="line">else</span><br><span class="line">    echo "n"</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+<h2 id="远程连接机器并且执行命令"><a href="#远程连接机器并且执行命令" class="headerlink" title="远程连接机器并且执行命令"></a>远程连接机器并且执行命令</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">es_pid=`ssh root@$&#123;host&#125; "ps -ef |grep -v "grep" | grep 'Elasticsearch'"`</span><br></pre></td></tr></table></figure>
+<p>此处填02图</p>
+<h2 id="定义函数，调用函数"><a href="#定义函数，调用函数" class="headerlink" title="定义函数，调用函数"></a>定义函数，调用函数</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">initGlobelConf()</span><br><span class="line">&#123;</span><br><span class="line">  replaceGlobelConf ARES_APP_PATH $INSTALL_PATH</span><br><span class="line">  replaceGlobelConf ARES_IPS $ARES_IP_ALL</span><br><span class="line">  replaceGlobelConf ARES_MASTER_IPS $ARES_MASTER_IP</span><br><span class="line">  replaceGlobelConf ES_MASTER_IP $ES_MASTER_IP</span><br><span class="line">  replaceGlobelConf ES_CLUSTER_NAME $ES_CLUSTER_NAME</span><br><span class="line">  replaceGlobelConf ES_CLUSTER_PORT $ES_CLUSTER_PORT</span><br><span class="line">  replaceGlobelConf RTP_KAFKA_ZK_IP $MASSDTKAFKA_ZK_IP</span><br><span class="line">  replaceGlobelConf RTP_KAFKA_ZK_PORT $MASSDTKAFKA_ZK_PORT</span><br><span class="line">  replaceGlobelConf HM_IP $HM_IP</span><br><span class="line">  replaceGlobelConf HB_IP $HB_IP</span><br><span class="line">  replaceGlobelConf HM_HDFS_PORT $HM_HDFS_PORT</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">replaceGlobelConf()</span><br><span class="line">&#123;</span><br><span class="line"><span class="meta">  #</span>globel配置文件里的配置项     </span><br><span class="line">  key=$1</span><br><span class="line"><span class="meta">  #</span>环境变量里的全局值</span><br><span class="line">  gvalue=$2</span><br><span class="line">  if [ -n "$gvalue" ];then</span><br><span class="line">    #echo "key,$key:$gvalue"</span><br><span class="line">    sed -i "s%^$&#123;key&#125;=.*$%$&#123;key&#125;=$&#123;gvalue&#125;%g" globe.common.conf</span><br><span class="line"></span><br><span class="line">  fi</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">for h in master40 backup41 slave42 slave43; do ssh $h "free -m"; done</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 常用方法，kill进程号</span><br><span class="line">killPIDS()</span><br><span class="line">&#123;</span><br><span class="line">        PIDS=`ps -ef | grep $1 | grep -v "grep" | awk '&#123;print $2&#125;'`</span><br><span class="line">        for LOOP in $PIDS</span><br><span class="line">        do</span><br><span class="line">                kill -9 $LOOP</span><br><span class="line">        done</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="判断目录是否存在，不存在则创建"><a href="#判断目录是否存在，不存在则创建" class="headerlink" title="判断目录是否存在，不存在则创建"></a>判断目录是否存在，不存在则创建</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">if [ ! -d $NB_VERSIION_DIR ]</span><br><span class="line">        then</span><br><span class="line">                mkdir $NB_VERSIION_DIR -p</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+<h2 id="修改sed-语句"><a href="#修改sed-语句" class="headerlink" title="修改sed 语句"></a>修改sed 语句</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CRIUS_CONF_DIR=/home/nebula/Nebula_DataCenter_ExternalTask/crius_conf</span><br><span class="line">grep -E '&lt;taskMaxInterVal&gt;[0-9]+&lt;/taskMaxInterVal&gt;' -rl ../crius_conf | xargs sed -i 's|&lt;taskMaxInterVal&gt;7200&lt;/taskMaxInterVal&gt;|&lt;taskMaxInterVal&gt;300&lt;/taskMaxInterVal&gt;|g'</span><br><span class="line"></span><br><span class="line">CRIUS_MASTER_SH=/home/nebula/NebulaPF_DataCenter_Crius/bin/crius_master_server.sh</span><br><span class="line"><span class="meta">#</span> 修改Crius_Master内存配置'$CRIUS_MASTER_SH</span><br><span class="line">sed -ri -e 's|Xmx[0-9]+M|Xmx512M|g' $CRIUS_MASTER_SH</span><br></pre></td></tr></table></figure>
+<h2 id="查找日志中某个关键词，处于日志中第几行"><a href="#查找日志中某个关键词，处于日志中第几行" class="headerlink" title="查找日志中某个关键词，处于日志中第几行"></a>查找日志中某个关键词，处于日志中第几行</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">(FUDE-1.1.0@AS6U3.amd64)[root@hm71 log]# cat gaia_query.log | grep -n "Query-Statistics-Data-Input-DB" | sed -n '$p'</span><br><span class="line">3468:2017-09-06 17:09:55 [Query-Statistics-Data-Input-DB] INFO com.fiberhome.gaia.query.statistic.QueryStatisticsManager.chore(343) -InputData To DB: &#123;&#125;</span><br><span class="line"></span><br><span class="line">(FUDE-1.1.0@AS6U3.amd64)[root@hm71 log]# cat gaia_query.log | grep -n "Query-Statistics-Data-Input-DB" | sed -n '2,4p'</span><br><span class="line">2:2017-09-06 00:08:48 [Query-Statistics-Data-Input-DB] INFO com.fiberhome.gaia.query.statistic.QueryStatisticsManager.chore(343) -InputData To DB: &#123;&#125;</span><br><span class="line">3:2017-09-06 00:13:48 [Query-Statistics-Data-Input-DB] INFO com.fiberhome.gaia.query.statistic.QueryStatisticsManager.chore(343) -InputData To DB: &#123;&#125;</span><br><span class="line">4:2017-09-06 00:18:48 [Query-Statistics-Data-Input-DB] INFO com.fiberhome.gaia.query.statistic.QueryStatisticsManager.chore(343) -InputData To DB: &#123;&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Awk-的END用法"><a href="#Awk-的END用法" class="headerlink" title="Awk 的END用法"></a>Awk 的END用法</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">total_mem=`dmidecode  -t memory |grep Size |grep -v 'No Module Installed'|awk '&#123;sum+=$2&#125;END&#123;print sum/1024&#125;'</span><br></pre></td></tr></table></figure>
+<p>说明：<code>{sum+=$2}</code>相当于<code>{print $2}</code>取到的第2列值，进行<code>sum+=</code>操作。在此行命令中 $2不一定是数字，有可能是字符串，此时用<code>sum+=</code>只会对数字进行操作，最终将<code>sum+=</code>操作过后的结果<code>sum/1024</code>并打印</p>
+<h2 id="替换文件中值的方法"><a href="#替换文件中值的方法" class="headerlink" title="替换文件中值的方法"></a>替换文件中值的方法</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 简单用法：</span><br><span class="line">sed -i  "s/HBASE_HEAPSIZE=.*/HBASE_HEAPSIZE=$hbase_heapsize/" "$&#123;hbase_confdir&#125;"/hbase-env.sh</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 高级用法：首先定位到/HBASE_OPTS所在行，再用正则修改值</span><br><span class="line">namenode_opts=1000</span><br><span class="line">namenode_memory="-Xms"$namenode_opts"m"</span><br><span class="line">sed -i "/HADOOP_NAMENODE_OPTS/s/-Xms[0-9]*m/$namenode_memory/g" ./hadoop-env.sh</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 高级用法：/&lt;name&gt;mapreduce.map.java.opts&lt;\/name&gt;/,/&lt;\/property&gt;/用法，定位以&lt;name&gt;mapreduce.map开始，&lt;\/property&gt;结束行，在通过s///g替换值</span><br><span class="line">map_Xmx=1000</span><br><span class="line">sed -i "/&lt;name&gt;mapreduce.map.java.opts&lt;\/name&gt;/,/&lt;\/property&gt;/  s/-Xmx[0-9]*m/$map_Xmx/" $hadoop_confdir/mapred-site.xml</span><br></pre></td></tr></table></figure>
+<h2 id="read-使用方法"><a href="#read-使用方法" class="headerlink" title="read 使用方法"></a>read 使用方法</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin/bash</span><br><span class="line"></span><br><span class="line">read -r -p "Are you Sure:"  input</span><br><span class="line">case $input in</span><br><span class="line">	[Yy][Ee][Ss]|[Yy]</span><br><span class="line">		echo "Yes"</span><br><span class="line">		;;</span><br><span class="line">	[Nn][Oo]|[Nn]</span><br><span class="line">		echo "No"</span><br><span class="line">		;;</span><br><span class="line">	*)</span><br><span class="line">		echo "Other"</span><br><span class="line">		echo "Please input Yes/No"</span><br><span class="line">		;;</span><br><span class="line">esac</span><br></pre></td></tr></table></figure>
+<h2 id="数组中添加元素"><a href="#数组中添加元素" class="headerlink" title="数组中添加元素"></a>数组中添加元素</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> ！ /bin/bash</span><br><span class="line">all_app=()</span><br><span class="line">all_app[0]=install_ares_stat_agent</span><br><span class="line">all_app[1]=install_top_stat_agent</span><br><span class="line"></span><br><span class="line">echo $&#123;all_app[*]&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="取变量循环遍历"><a href="#取变量循环遍历" class="headerlink" title="取变量循环遍历"></a>取变量循环遍历</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 方法一：</span><br><span class="line">len=$&#123;#ALL_IP_ARRAY[*]&#125;</span><br><span class="line">  for (( i=0;i&lt;$len;i=i+1 ))</span><br><span class="line">  do</span><br><span class="line">        local ip=$&#123;ALL_IP_ARRAY[i]&#125;</span><br><span class="line">        scp -r globe.common.conf $ip:$INSTALLPACKAGE_PATH &gt;/dev/null 2&gt;/dev/null</span><br><span class="line">        scp -r conf/* $ip:$INSTALLPACKAGE_PATH/conf&gt;/dev/null 2&gt;/dev/null</span><br><span class="line">        alterAresMaster $ip</span><br><span class="line">        ssh $&#123;ip&#125; "cd $INSTALLPACKAGE_PATH;sh node_install.sh reconfig" 2&gt;/dev/null</span><br><span class="line"></span><br><span class="line">  done</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 方法二：</span><br><span class="line">[root@hs2 ~] # sh 1.sh</span><br><span class="line">pro : nb tab 1m nb tab auth</span><br><span class="line">nb tab 1m</span><br><span class="line">nb tab auth</span><br><span class="line">[root@hs2 ~] # vim 1.sh</span><br><span class="line"><span class="meta">#</span>!/bin/sh</span><br><span class="line">pp=nb_tab_im,nb_tab_auth</span><br><span class="line">pro=($&#123;pp//,/ &#125;)</span><br><span class="line">echo "pro :" $&#123;pro[*]&#125;</span><br><span class="line">for ((i:0;i&lt;$&#123;#pro[*]&#125;;i++))</span><br><span class="line">do</span><br><span class="line">	echo $&#123;pro[i]&#125;</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span> 说明：</span><br><span class="line"><span class="meta">#</span> pp是以逗号分隔的字符</span><br><span class="line"><span class="meta">#</span> 通过pro=($&#123;pp//,/ &#125;) 方法转为list</span><br><span class="line"><span class="meta">#</span> $&#123;#pro[*]&#125; 为 数字2</span><br><span class="line"><span class="meta">#</span> $&#123;pro[i]&#125; 会取list中每一个字符</span><br></pre></td></tr></table></figure>
+<h2 id="nohup-定义"><a href="#nohup-定义" class="headerlink" title="nohup 定义"></a>nohup 定义</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd $&#123;INSTALL_PATH&#125; &amp;&amp; source /etc/profile &amp;&amp; nohup python ns_agent.py &gt; log_of_ns_agent 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
+<p><code>nohup python ns_server.py &gt; log_of_ns_server 2&gt;&amp;1 &amp;</code><br><code>nohup</code>：表示永久运行，即使关闭终端程序一直运行下去<br><code>&amp;</code>： 表示在后台运行<br><code>2&gt;&amp;1</code> ：标准错误2重定向到标准输出<code>&amp;1</code>，标准输出1再重定向到<code>log_of_ns_server</code>日志中</p>
+<h2 id="amp-amp-和-号的区别"><a href="#amp-amp-和-号的区别" class="headerlink" title="&amp;&amp; 和 ; 号的区别"></a>&amp;&amp; 和 ; 号的区别</h2><p><code>；</code>是第一个命令执行后，无论是否成功，都执行<code>；</code>之后的语句</p>
+<p><code>&amp;&amp;</code>是第一个命令执行成功后，才执行<code>&amp;&amp;</code>后面的语句</p>
+<h2 id="判断对端服务器是否无密码登录-返回不为0-则需要密码"><a href="#判断对端服务器是否无密码登录-返回不为0-则需要密码" class="headerlink" title="判断对端服务器是否无密码登录,返回不为0,则需要密码"></a>判断对端服务器是否无密码登录,返回不为0,则需要密码</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">check_auto_ssh()</span><br><span class="line">&#123;</span><br><span class="line">  ssh -o  StrictHostKeYChecking=no -o PasswordAuthentication=no $INSTALL_IP 'exit'</span><br><span class="line">  if [ $? -ne 0 ]</span><br><span class="line">  then</span><br><span class="line">  	echo "can not login $INSTALL_IP without passwd."</span><br><span class="line">  	exit 1</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Cat-n-用法"><a href="#Cat-n-用法" class="headerlink" title="Cat -n 用法"></a>Cat -n 用法</h2><p>此处填01图</p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://yoursite.com/2016/08/15/Shell基础用法/" data-id="cjou2tnq7000grixjofqer5f8" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>关注我 :</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/BullFrogLT" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2016/08/15/Linux文本处理/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            Linux文本处理
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2016/08/15/Find用法/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">Find用法</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/05/27/Selenium2/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/selenium/selenium.png)" alt="Selenium2" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Python/">Python</a></p>
+                            <p class="item-title"><a href="/2018/05/27/Selenium2/" class="title">Selenium2</a></p>
+                            <p class="item-date"><time datetime="2018-05-27T13:06:39.000Z" itemprop="datePublished">2018-05-27</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/05/27/Selenium属性及调用方法/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/selenium/selenium.png)" alt="Selenium2属性及调用方法" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Python/">Python</a></p>
+                            <p class="item-title"><a href="/2018/05/27/Selenium属性及调用方法/" class="title">Selenium2属性及调用方法</a></p>
+                            <p class="item-date"><time datetime="2018-05-27T13:06:39.000Z" itemprop="datePublished">2018-05-27</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/03/04/macaca安装篇（一）/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/macaca/monkey.png)" alt="macaca安装篇（一）" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/macaca/">macaca</a></p>
+                            <p class="item-title"><a href="/2018/03/04/macaca安装篇（一）/" class="title">macaca安装篇（一）</a></p>
+                            <p class="item-date"><time datetime="2018-03-04T13:58:01.000Z" itemprop="datePublished">2018-03-04</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/02/26/stat/" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/stat/5b1273ae7db8bbc783c12b813908caf3.jpg)" alt="基于 python 的 bottle 库实现的数据量统计应用" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Python/">Python</a></p>
+                            <p class="item-title"><a href="/2018/02/26/stat/" class="title">基于 python 的 bottle 库实现的数据量统计应用</a></p>
+                            <p class="item-date"><time datetime="2018-02-26T14:50:43.000Z" itemprop="datePublished">2018-02-26</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2017/02/13/获取Linux硬件信息/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Python/">Python</a></p>
+                            <p class="item-title"><a href="/2017/02/13/获取Linux硬件信息/" class="title">获取Linux硬件信息</a></p>
+                            <p class="item-date"><time datetime="2017-02-13T03:33:11.000Z" itemprop="datePublished">2017-02-13</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">分类</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Shell/">Shell</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/macaca/">macaca</a><span class="category-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">May 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/03/">March 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/02/">February 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">12</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">标签</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bottle/">Bottle</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Selenium2/">Selenium2</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Shell/">Shell</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web/">Web</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/macaca/">macaca</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/Bottle/" style="font-size: 10px;">Bottle</a> <a href="/tags/Linux/" style="font-size: 16.67px;">Linux</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/Selenium2/" style="font-size: 13.33px;">Selenium2</a> <a href="/tags/Shell/" style="font-size: 16.67px;">Shell</a> <a href="/tags/Web/" style="font-size: 10px;">Web</a> <a href="/tags/macaca/" style="font-size: 10px;">macaca</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="https://github.com/BullFrogLT">git</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <!-- <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1> -->
+                <p>&copy; 2018 John Doe</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+        
+    
+    <script>
+    var disqus_shortname = 'hueman';
+    
+    
+    var disqus_url = 'http://yoursite.com/2016/08/15/Shell基础用法/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
