@@ -16,12 +16,12 @@
 <meta property="og:url" content="http://yoursite.com/2016/08/15/软件知识/index.html">
 <meta property="og:site_name" content="BullFrog">
 <meta property="og:description" content="Linux服务器间信任连接1234# 在主信任机上生成KEY：/usr/bin/ssh-keygen -t rsa -N &quot;&quot;# 将生成的KEY导入到各台从信任机器的验证文件里面：cat /root/.ssh/id_rsa.pub | ssh 服务器ip &apos;cat &amp;gt;&amp;gt; .ssh/authorized_keys&apos; Linux CPU数量判断1、具有相同core id的cpu是同一个co">
-<meta property="og:image" content="c:/Users/ADMINI~1/AppData/Local/Temp/1540800792161.png">
-<meta property="og:updated_time" content="2018-11-23T13:15:51.762Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/Linux/03.png">
+<meta property="og:updated_time" content="2018-11-23T13:24:25.328Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content=" 软件知识">
 <meta name="twitter:description" content="Linux服务器间信任连接1234# 在主信任机上生成KEY：/usr/bin/ssh-keygen -t rsa -N &quot;&quot;# 将生成的KEY导入到各台从信任机器的验证文件里面：cat /root/.ssh/id_rsa.pub | ssh 服务器ip &apos;cat &amp;gt;&amp;gt; .ssh/authorized_keys&apos; Linux CPU数量判断1、具有相同core id的cpu是同一个co">
-<meta name="twitter:image" content="c:/Users/ADMINI~1/AppData/Local/Temp/1540800792161.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/Linux/03.png">
     
 
     
@@ -172,9 +172,10 @@
 <h2 id="rpm包删除不了"><a href="#rpm包删除不了" class="headerlink" title="rpm包删除不了"></a>rpm包删除不了</h2><p>rpm包删除不了发现2个同样的包，用下面参数删除</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -e --allmatches mysql-5.0.77-4.el5_5.4</span><br></pre></td></tr></table></figure>
 <h2 id="服务裁剪、关闭Linux防火墙"><a href="#服务裁剪、关闭Linux防火墙" class="headerlink" title="服务裁剪、关闭Linux防火墙"></a>服务裁剪、关闭Linux防火墙</h2><ol>
-<li><p>执行<code>setup</code>命令，在界面中关闭防火墙</p>
-<p><img src="C:\Users\ADMINI~1\AppData\Local\Temp\1540800792161.png" alt="1540800792161"></p>
-</li>
+<li>执行<code>setup</code>命令，在界面中关闭防火墙</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/Linux/03.png" alt="setup"></p>
+<ol>
 <li><p>修改<code>/etc/selinux/config</code>配置文件，将<code>SELINUX</code>改为<code>disabled</code></p>
 </li>
 <li><p>服务裁剪执行</p>
@@ -202,7 +203,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2016/08/15/软件知识/" data-id="cjou1tzf7000chnxjs74qmw23" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2016/08/15/软件知识/" data-id="cjou25awc000alqxj9t7mz570" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -309,6 +310,12 @@
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
+    
+        <a href="/2016/08/15/抓包相关/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">抓包相关</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
     
 </nav>
 
