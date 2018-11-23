@@ -142,17 +142,17 @@
         <article class="article article-summary">
     <div class="article-summary-inner">
         
-        <a href="/2016/08/15/硬件知识/" class="thumbnail">
+        <a href="/2016/08/15/Python公共方法/" class="thumbnail">
     
     
-        <span style="background-image:url(https://raw.githubusercontent.com/BullFrogLT/BullFrogLT.github.io/master/images/Linux/01.png)" alt="硬件知识" class="thumbnail-image"></span>
+        <span class="thumbnail-image thumbnail-none"></span>
     
     
         
 <span class="comment-counter">
     <i class="fa fa-comments-o"></i>
     
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2016/08/15/硬件知识/">0</span>
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2016/08/15/Python公共方法/">0</span>
     
 </span>
 
@@ -163,32 +163,19 @@
         
         <div class="article-meta">
             <div class="category">
-            <a class="article-category-link" href="/categories/Linux/">Linux</a>
+            <a class="article-category-link" href="/categories/Python/">Python</a>
             </div>
             <div class="date"><time datetime="2016-08-15T12:51:18.000Z" itemprop="datePublished">2016-08-15</time></div>
         </div>
         
     
         <h1 class="article-title" itemprop="name">
-        <a href="/2016/08/15/硬件知识/">硬件知识</a>
+        <a href="/2016/08/15/Python公共方法/">Python公共方法</a>
         </h1>
     
 
         <p class="article-excerpt">
-            网络
-光纤分为多模光纤和单模光纤
-多模光纤主要用于远距离的传输
-单模光纤主要用于近距离传输
-光纤根据接口的不同还可分为L口（小口，这个常用，PR上使用）s口（大口）F口（圆口）
-使用法兰盘可以将光纤连接起来
-光卡光纤需要插在光卡上
-光卡需要安装在服务器的光模块上
-光模块可以分为双口的和单口的
-如何区分光模块的进口和出口
-进口没有红光，出口有红光
-如何区分光纤的进口和出口
-进口没有红光，出口有红光
-
+            获取 Linux 本机 IP123456789# 方法一：# 利用socket取计算机名、计算机IP，这样做的好处是可以跨操作系统hostname = socket.gethostname()ip = socket.gethostbyname(self.hostname)# 方法二：def getip():    ip = "ifconfig -a | grep 'inet addr' | gre
         </p>
     </div>
 </article>
@@ -197,6 +184,56 @@
     
     
     
+    
+        <article class="article article-summary">
+    <div class="article-summary-inner">
+        
+        <a href="/2016/08/15/Python文件处理/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+    
+        
+<span class="comment-counter">
+    <i class="fa fa-comments-o"></i>
+    
+        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2016/08/15/Python文件处理/">0</span>
+    
+</span>
+
+
+    
+</a>
+
+        
+        <div class="article-meta">
+            <div class="category">
+            <a class="article-category-link" href="/categories/Python/">Python</a>
+            </div>
+            <div class="date"><time datetime="2016-08-15T12:51:18.000Z" itemprop="datePublished">2016-08-15</time></div>
+        </div>
+        
+    
+        <h1 class="article-title" itemprop="name">
+        <a href="/2016/08/15/Python文件处理/">Python文件处理</a>
+        </h1>
+    
+
+        <p class="article-excerpt">
+            常用方法12345678910111213os.chdir(tmpdir)      			 # 更改当前路径 cd tmpdir变量目录os.getcwd()     			     # 取当前路径、os.mkdir('example')	 		      # 创建目录os.listdir(cwd)      		      # 取当前路径下所有目录os.path.join(output_pat
+        </p>
+    </div>
+</article>
+    
+        </div>
+    
+
+    
+    
+    
+    
+        <div class="article-row">
     
         <article class="article article-summary">
     <div class="article-summary-inner">
@@ -236,56 +273,6 @@
         <p class="article-excerpt">
             Linux服务器间信任连接1234# 在主信任机上生成KEY：/usr/bin/ssh-keygen -t rsa -N ""# 将生成的KEY导入到各台从信任机器的验证文件里面：cat /root/.ssh/id_rsa.pub | ssh 服务器ip 'cat &gt;&gt; .ssh/authorized_keys'
 Linux CPU数量判断1、具有相同core id的cpu是同一个co
-        </p>
-    </div>
-</article>
-    
-        </div>
-    
-
-    
-    
-    
-    
-        <div class="article-row">
-    
-        <article class="article article-summary">
-    <div class="article-summary-inner">
-        
-        <a href="/2016/08/15/awk用法/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-    
-        
-<span class="comment-counter">
-    <i class="fa fa-comments-o"></i>
-    
-        <span class="disqus-comment-count" data-disqus-identifier="" data-disqus-url="http://yoursite.com/2016/08/15/awk用法/">0</span>
-    
-</span>
-
-
-    
-</a>
-
-        
-        <div class="article-meta">
-            <div class="category">
-            <a class="article-category-link" href="/categories/Shell/">Shell</a>
-            </div>
-            <div class="date"><time datetime="2016-08-15T12:51:18.000Z" itemprop="datePublished">2016-08-15</time></div>
-        </div>
-        
-    
-        <h1 class="article-title" itemprop="name">
-        <a href="/2016/08/15/awk用法/">awk用法</a>
-        </h1>
-    
-
-        <p class="article-excerpt">
-            统计 Hadoop 集群磁盘使用情况1for i in `cat /root/hosts`;do ssh $i "df |grep "hdfsdata""| awk  '&#123;(size+=$2) (used+=$3) (avail+=$4)&#125;;END&#123;printf"%d,%d,%d\n",size,used,avail&#125;&#123;&#125;'&gt;&gt
         </p>
     </div>
 </article>
@@ -334,7 +321,7 @@ Linux CPU数量判断1、具有相同core id的cpu是同一个co
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2018/11/23/Redis/" class="thumbnail">
+                            <a href="/2018/11/23/Postgres/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -346,7 +333,7 @@ Linux CPU数量判断1、具有相同core id的cpu是同一个co
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/数据库/">数据库</a></p>
-                            <p class="item-title"><a href="/2018/11/23/Redis/" class="title">Redis</a></p>
+                            <p class="item-title"><a href="/2018/11/23/Postgres/" class="title">Postgres</a></p>
                             <p class="item-date"><time datetime="2018-11-23T13:48:01.000Z" itemprop="datePublished">2018-11-23</time></p>
                         </div>
                     </li>
@@ -394,7 +381,7 @@ Linux CPU数量判断1、具有相同core id的cpu是同一个co
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2018/11/23/Postgres/" class="thumbnail">
+                            <a href="/2018/11/23/Redis/" class="thumbnail">
     
     
         <span class="thumbnail-image thumbnail-none"></span>
@@ -406,7 +393,7 @@ Linux CPU数量判断1、具有相同core id的cpu是同一个co
                         
                         <div class="item-inner">
                             <p class="item-category"><a class="article-category-link" href="/categories/数据库/">数据库</a></p>
-                            <p class="item-title"><a href="/2018/11/23/Postgres/" class="title">Postgres</a></p>
+                            <p class="item-title"><a href="/2018/11/23/Redis/" class="title">Redis</a></p>
                             <p class="item-date"><time datetime="2018-11-23T13:48:01.000Z" itemprop="datePublished">2018-11-23</time></p>
                         </div>
                     </li>
