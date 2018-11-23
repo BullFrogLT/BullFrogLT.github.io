@@ -405,13 +405,13 @@ Bottle是一个简单高效的遵循WSGI的微型python Web框架。说微型，
     
 
         <p class="article-excerpt">
-            VIM 一些用法vim 比对文件区别123vim -d file1.txt file2.txt:qall
+            vim 比对文件区别123vim -d file1.txt file2.txt:qall
 如果需要跳转光标到另一侧，按Ctrl+w键
 忽略大小写12:set ignorecase:set noignorecase
 查询 the1/\&lt;the\&gt;
 切换到第5行15G
 更改文件格式123set ff=unixset ff=dosset ff=mac
-文件加密解密12vim 
+文件加密解密12vim -x 1.txt
         </p>
     </div>
 </article>
@@ -457,12 +457,12 @@ Bottle是一个简单高效的遵循WSGI的微型python Web框架。说微型，
     
 
         <p class="article-excerpt">
-            抓包相关知识tcpreplay放包操作1tcpreplay -i eth2 -l 1  -r 10 -I00:15:17:61:53:AD /home/http.pcap
+            tcpreplay放包操作1tcpreplay -i eth2 -l 1  -r 10 -I00:15:17:61:53:AD /home/http.pcap
 -i:发送的网口
 -l:发送的次数，如果为“0”表示循环放包
 -r:放包的速率(Mbps)，如果没有此项，表示原速放包
 -I:指定目标MAC      若是本机，则可以省略
-tcpreplay 安装拷贝libnet_1.1.2.
+tcpreplay 安装拷贝libnet_1.1.2.1.tar.
         </p>
     </div>
 </article>
@@ -512,7 +512,7 @@ tcpreplay 安装拷贝libnet_1.1.2.
     
 
         <p class="article-excerpt">
-            硬件知识网络此处01、02的图
+            网络此处01、02的图
 光纤分为多模光纤和单模光纤
 多模光纤主要用于远距离的传输
 单模光纤主要用于近距离传输
@@ -524,7 +524,7 @@ tcpreplay 安装拷贝libnet_1.1.2.
 如何区分光模块的进口和出口
 进口没有红光，出口有红光
 如何区分光纤的进口和出口
-
+进口没有
         </p>
     </div>
 </article>
@@ -570,8 +570,8 @@ tcpreplay 安装拷贝libnet_1.1.2.
     
 
         <p class="article-excerpt">
-            软件知识Linux服务器间信任连接1234# 在主信任机上生成KEY：/usr/bin/ssh-keygen -t rsa -N ""# 将生成的KEY导入到各台从信任机器的验证文件里面：cat /root/.ssh/id_rsa.pub | ssh 服务器ip 'cat &gt;&gt; .ssh/authorized_keys'
-Linux CPU数量判断1、具有相同core id的cpu是同
+            Linux服务器间信任连接1234# 在主信任机上生成KEY：/usr/bin/ssh-keygen -t rsa -N ""# 将生成的KEY导入到各台从信任机器的验证文件里面：cat /root/.ssh/id_rsa.pub | ssh 服务器ip 'cat &gt;&gt; .ssh/authorized_keys'
+Linux CPU数量判断1、具有相同core id的cpu是同一个co
         </p>
     </div>
 </article>
